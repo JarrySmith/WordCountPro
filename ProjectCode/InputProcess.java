@@ -6,7 +6,7 @@ public class InputProcess {
     public String process (String[] args) throws IOException,IllegalArgumentException{
         String file_path=null;
         if(args.length!=1)
-            throw new IllegalArgumentException("参数不符合规范");
+            throw new IllegalArgumentException("参数数量只能为一");
         if(!args[0].endsWith(".txt"))
             throw new IllegalArgumentException("待处理文件不是txt类型");
         file_path=args[0];
