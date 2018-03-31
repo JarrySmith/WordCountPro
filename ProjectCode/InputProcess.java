@@ -1,16 +1,9 @@
 package project;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-
-/**
- * @author 周志为
- */
+import java.io.*;
 
 public class InputProcess {
-    public static String process(String[] args){
+    public String process (String[] args) throws IOException,IllegalArgumentException{
         String file_path=null;
         if(args.length!=1)
             throw new IllegalArgumentException("参数不符合规范");
@@ -19,7 +12,7 @@ public class InputProcess {
         file_path=args[0];
         File file=new File(file_path);
         Reader reader=null;
-        try{
+
             reader = new InputStreamReader(new FileInputStream(file));
             int tmpchar;
             while((tmpchar=reader.read())!=-1){
@@ -36,10 +29,6 @@ public class InputProcess {
                         tmpchar!=(int)'\r')
                     throw new IllegalArgumentException("待处理文件内包含非法字符");
             }
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
         return file_path;
     }
 }
