@@ -8,7 +8,6 @@ import java.util.Map;
 
 /**
  * @author 封俊羽;
- * Creat at 2018/3/14
  * 已经通过阿里巴巴编码规范扫描
  */
 public class WordCount {
