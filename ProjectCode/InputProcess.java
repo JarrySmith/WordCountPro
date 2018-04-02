@@ -7,7 +7,7 @@ import java.io.*;
  */
 
 public class InputProcess {
-    public String process (String[] args) throws IOException,IllegalArgumentException{
+    public String processInput (String[] args) throws IOException,IllegalArgumentException{
         String file_path=null;
         if(args.length!=1)
             throw new IllegalArgumentException("参数个数只能为1");
